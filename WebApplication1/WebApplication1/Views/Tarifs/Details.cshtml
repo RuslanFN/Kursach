@@ -1,0 +1,50 @@
+﻿@model WebApplication1.Models.Tarif
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tarif</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TelDot_A)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelDot_A)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TelDot_B)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelDot_B)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price_D)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price_D)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price_N)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price_N)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

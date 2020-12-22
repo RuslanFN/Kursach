@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<<form class="form-horizontal">
+     <fieldset>
+         
+         <!-- Form Name -->
+         <legend>Главная страница</legend>
+         <!-- Button -->
+
+
+          <div class="form-group">
+             <label class="col-md-4 control-label" \"> @Html.ActionLink("Посчитать выручку", "BuildReport")</label>
+             <div class="col-md-4">
+                  <a class="btn btn-primary" href="@Url.Action("BuildReport")">Посчитать выручку</a>
+             </div>
+          </div>
+
+         <!-- Search input-->
+         @using (Html.BeginForm("BuildReport2", "Home"))
+         {
+             <div class="form-group">
+                 <label class="col-md-4 control-label" for="searchinput">ИНН абоента</label>
+                 <div class="col-md-4">
+                     <input id="searchinput" name="searchinput" type="search"
+                            placeholder="Введите ИНН" class="form-control input-md">
+                 </div>
+             </div>
+
+             <!-- Button -->
+             <div class="form-group">
+                 <label class="col-md-4 control-label" for="singlebutton"></label>
+                 <div class="col-md-4">
+                     <input type="submit" class="btn btn-primary"
+                            value="Посчитат для 1 абонента" />
+                 </div>
+             </div>
+         }
+        
+     </fieldset>
+</form>
+ 
+
+@Scripts.Render("~/scripts/jquery-3.4.1.min.js")
+@Scripts.Render("~/scripts/jquery.unobtrusive-ajax.min.js")

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WebApplication1.Models.Tarif>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TelDot_A)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TelDot_B)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price_D)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price_N)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TelDot_A)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TelDot_B)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price_D)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price_N)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
